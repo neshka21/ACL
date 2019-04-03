@@ -1,0 +1,1123 @@
+// Variables
+//
+// Las variables deben seguir la fórmula `$ component-state-property-size` para
+// nomenclatura consistente. Ej: $ nav-link-disabled-color y $ modal-content-box-shadow-xs.
+
+// sistema de color
+
+$ white :     #fff  ! default ;
+$ gray-100 : # f8f9fa  ! default ;
+$ grey-200 : # e9ecef  ! predeterminado ;
+$ gray-300 : # dee2e6  ! default ;
+$ gray-400 : # ced4da  ! default ;
+$ gray-500 : # adb5bd  ! default ;
+$ gray-600 : # 6c757d  ! por defecto ;
+$ grey-700 : # 495057  ! por defecto ;
+$ gray-800 : # 343a40  ! por defecto ;
+$ gray-900 : # 212529  ! predeterminado ;
+$ negro :     # 000  ! predeterminado ;
+
+$ grises : () ! por defecto ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ grises : map-merge (
+  (
+    " 100 " :  $ gris-100 ,
+    " 200 " :  $ gris-200 ,
+    " 300 " :  $ gris-300 ,
+    " 400 " :  $ gris-400 ,
+    " 500 " :  $ Gray-500 ,
+    " 600 " :  $ gris-600 ,
+    " 700 " :  $ Gray-700 ,
+    " 800 " :  $ Gray-800 ,
+    " 900 " :  $ gris-900
+  )
+  $ grises
+);
+
+$ azul :     # 007bff  ! predeterminado ;
+$ indigo :   # 6610f2  ! predeterminado ;
+$ purple :   # 6f42c1  ! default ;
+$ pink :     # e83e8c  ! default ;
+$ red :      # dc3545  ! por defecto ;
+$ orange :   # fd7e14  ! default ;
+$ amarillo :   # ffc107  ! predeterminado ;
+$ verde :    # 28a745  ! por defecto ;
+$ teal :     # 20c997  ! por defecto ;
+$ cyan :     # 17a2b8  ! default ;
+
+$ colores : () ! por defecto ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ colores : map-merge (
+  (
+    " azul " :        $ azul ,
+    " índigo " :      $ índigo ,
+    " púrpura " :      $ púrpura ,
+    " rosa " :        $ rosa ,
+    " rojo " :         $ rojo ,
+    " naranja " :      $ naranja ,
+    " amarillo " :      $ amarillo ,
+    " verde " :       $ verde ,
+    " teal " :        $ teal ,
+    " cyan " :        $ cyan ,
+    " blanco " :       $ blanco ,
+    " gris " :        $ gris-600 ,
+    " gris oscuro " :   $ gris-800
+  )
+  $ colores
+);
+
+$ primario :        $ azul  ! por defecto ;
+$ secundario :      $ grey-600  ! por defecto ;
+$ éxito :        $ verde  defecto! ;
+$ info :           $ cyan  ! por defecto ;
+$ aviso :        $ amarillo  ! por defecto ;
+$ peligro :         $ rojo  ! por defecto ;
+$ light :          $ gray-100  ! por defecto ;
+$ dark :           $ gray-800  ! por defecto ;
+
+$ theme-colors : () ! por defecto ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ colores temáticos : combinación de mapas (
+  (
+    " primario " :     $ primario ,
+    " secundario " :   $ secundario ,
+    " éxito " :     $ éxito ,
+    " info " :        $ info ,
+    " advertencia " :     $ advertencia ,
+    " peligro " :      $ peligro ,
+    " light " :       $ light ,
+    " oscuro " :        $ oscuro
+  )
+  $ colores temáticos
+);
+
+// Establecer un punto de salto específico para solicitar saltos de color
+$ theme-color-interval :       8 %  ! default ;
+
+// El valor de luminosidad yiq que determina cuándo cambia la luminosidad del color de "oscuro" a "claro". Los valores aceptables están entre 0 y 255.
+$ yiq-contraste-umbral :   150  ! por defecto ;
+
+// Personalice los colores del texto claro y oscuro para utilizarlos en nuestra función de contraste de color YIQ.
+$ yiq-text-dark :              $ gray-900  ! predeterminado ;
+$ yiq-text-light :             $ white  ! por defecto ;
+
+
+// Opciones
+//
+// Modifique rápidamente el estilo global habilitando o deshabilitando funciones opcionales.
+
+$ enable-caret :                                 true  ! default ;
+$ enable-rounded :                               true  ! default ;
+$ enable-shadows :                               false  ! default ;
+$ enable-gradients :                             false  ! default ;
+$ enable-transitions :                           true  ! default ;
+$ enable-preferers-reducido-motion-media-query :    true  ! default ;
+$ enable-hover-media-query :                     false  ! predeterminado ; // Desaprobado, ya no afecta a ningún CSS compilado.
+$ enable-grid-classes :                          true  ! default ;
+$ enable-pointer-cursor-for-buttons :            true  ! default ;
+$ enable-print-styles :                          true  ! default ;
+$ enable-responsive-font-size :                 false  ! predeterminado ;
+$ enable-validation-icons :                      true  ! predeterminado ;
+$ enable-deprecation-messages :                  true  ! default ;
+
+
+// espaciamiento
+//
+// Controla el estilo predeterminado de la mayoría de los elementos de Bootstrap modificando estos
+// variables. Sobre todo centrado en el espaciamiento.
+// Puede agregar más entradas al mapa de $ espaciadores, si necesita más variación.
+
+$ spacer : 1 rem  ! default ;
+$ spacers : () ! por defecto ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ espaciadores : map-merge (
+  (
+    0 : 0 ,
+    1 :  ($ espaciador  * .25 ),
+    2 : ( $ espaciador * .5 ),
+    3 : $ espaciador ,
+    4 : ( $ espaciador * 1.5 ),
+    5 : ( $ espaciador * 3 )
+  )
+  $ espaciadores
+);
+
+// Esta variable afecta a las clases `.h- *` y `.w- *`.
+$ tamaños : () ! por defecto ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ tamaños : map-merge (
+  (
+    25 : 25 % ,
+    50 : 50 % ,
+    75 : 75 % ,
+    100 : 100 % ,
+    auto :  auto
+  )
+  $ tamaños
+);
+
+
+// Cuerpo
+//
+// Configuraciones para el elemento `<body>`.
+
+$ body-bg :                    $ white  ! por defecto ;
+$ body-color :                 $ grey-900  ! predeterminado ;
+
+
+// Enlaces
+//
+// Elementos de anclaje de estilo.
+
+$ link-color :                               tema-color ( " primario " ) ! predeterminado ;
+$ link-decoration :                          none  ! default ;
+$ link-hover-color : se                         oscurece ( $ link-color , 15 % ) predeterminado ;
+$ link-hover-decoration :                    underline  ! default ;
+// Oscurecer porcentaje para enlaces con la clase `.text- *` (por ejemplo, `.text-success`)
+$ enfatizado-enlace-flotar-oscurecer-porcentaje : 15 %  ! por defecto ;
+
+// Párrafos
+//
+// Elemento estilo p.
+
+$agraph-margin-bottom :    1 rem  ! default ;
+
+
+// Puntos de ruptura de cuadrícula
+//
+// Defina las dimensiones mínimas en las que cambiará su diseño,
+// Adaptación a diferentes tamaños de pantalla, para usar en consultas de medios.
+
+$ grid-breakpoints :
+  xs: 0 ,
+  sm: 576 px ,
+  md: 768 px ,
+  lg: 992 px ,
+  xl: 1200 px
+) ! por defecto ;
+
+@include  _assert-ascendente ( $ grid-breakpoints , " $ grid-breakpoints " );
+@include  _assert-starts-at-zero ( $ grid-breakpoints , " $ grid-breakpoints " );
+
+
+// Contenedores de rejilla
+//
+// Defina el ancho máximo de `.container` para diferentes tamaños de pantalla.
+
+$ container-max-anchos : (
+  sm: 540 px ,
+  md: 720 px ,
+  lg: 960 px ,
+  xl: 1140 px
+) ! por defecto ;
+
+@include  _assert-ascendente ( $ container-max-widths , " $ container-max-widths " );
+
+
+// Grillas columnas
+//
+// Establecer el número de columnas y especificar el ancho de los canales.
+
+$ grid-columns :                 12  ! por defecto ;
+$ grid-gutter-width :            30 px  ! predeterminado ;
+
+
+// Componentes
+//
+// Definir tamaños comunes de relleno y radio de borde y más.
+
+$ line-height-lg :               1.5  ! por defecto ;
+$ line-height-sm :               1.5  ! por defecto ;
+
+$ border-width :                 1 px  ! default ;
+$ border-color :                 $ grey-300  ! predeterminado ;
+
+$ border-radius :                .25 rem  ! default ;
+$ border-radius-lg :             .3 rem  ! default ;
+$ border-radius-sm :             .2 rem  ! default ;
+
+$ pastilla redondeada :                 50 rem  ! por defecto ;
+
+$ box-shadow-sm :                0 .125 rem .25 rem  rgba ( $ black , .075 ) ! predeterminado ;
+$ box-shadow :                   0 .5 rem 1 rem  rgba ( $ black , .15 ) ! predeterminado ;
+$ box-shadow-lg :                0 1 rem 3 rem  rgba ( $ black , .175 ) ! predeterminado ;
+
+$ component-active-color :       $ white  ! por defecto ;
+$ component-active-bg :          theme-color ( " primary " ) ! default ;
+
+$ ancho de careta :                  .3 em  ! por defecto ;
+$ caret-vertical-align :         $ caret-width * .85  ! predeterminado ;
+espacio entre caracteres :                $ caret-width * .85  ! default ;
+
+$ transición de la base : toda 0,2 s facilidad - en - salir por defecto! ;
+$ transition-fade : opacity .15 s linear ! default ;
+$ transición-colapso : altura .35 s ¡ facilidad ! por defecto ;
+
+$ embed-responsive-aspect-ratios : () ! por defecto ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ embed-responsive-aspect-ratios : join (
+  (
+    (21 9 ),
+    ( 16 9 ),
+    ( 4 3 ),
+    ( 1 1 ),
+  )
+  $ embed-responsive-aspect-ratios
+);
+
+// tipografía
+//
+// Fuente, altura de línea y color para el texto del cuerpo, los encabezados y más.
+
+// stylelint-disable value-keyword-case
+$ font-family-sans-serif : -apple - system , BlinkMacSystemFont, " Segoe UI " , Roboto, " Helvetica Neue " , Arial , " Noto Sans " , sans-serif , " Apple Color Emoji " , " Segoe UI Emoji " , " Segoe UI Symbol " , " Noto Color Emoji "  ! Predeterminado ;
+$ font-family-monospace : SFMono - Regular, Menlo, Monaco, Consolas, " Liberation Mono " , " Courier New " , monospace  ! default ;
+$ font-family-base :             $ font-family-sans-serif  ! default ;
+// stylelint-enable value-keyword-case
+
+$ font-size-base :               1 rem  ! default ; // Asume el valor predeterminado del navegador, normalmente `16px`
+$ font-size-lg :                 $ font-size-base * 1.25  ! por defecto ;
+$ font-size-sm :                 $ font-size-base * .875  ! por defecto ;
+
+$ font-weight-lighter :          lighter  ! default ;
+$ font-weight-light :            300  ! por defecto ;
+$ font-weight-normal :           400  ! por defecto ;
+$ font-weight-bold :             700  ! por defecto ;
+$ font-weight-bolder : en           negrita  ! por defecto ;
+
+$ font-weight-base :             $ font-weight-normal  ! predeterminado ;
+$ line-height-base :             1.5  ! por defecto ;
+
+$ h1-font-size :                 $ font-size-base * 2.5  ! por defecto ;
+$ h2-font-size :                 $ font-size-base * 2  ! por defecto ;
+$ h3-font-size :                 $ font-size-base * 1.75  ! por defecto ;
+$ h4-font-size :                 $ font-size-base * 1.5  ! por defecto ;
+$ h5-font-size :                 $ font-size-base * 1.25  ! por defecto ;
+$ h6-font-size :                 $ font-size-base  ! predeterminado ;
+
+$ headings-margin-bottom :       $ spacer / 2  ! default ;
+$ headings-font-family : null ! default ;
+$ headings-font-weight :         500  ! por defecto ;
+$ headings-line-height :         1.2  ! default ;
+$ headings-color : null ! default ;
+
+$ display1-size :                6 rem  ! default ;
+$ display2-size :                5.5 rem  ! default ;
+$ display3-size :                4.5 rem  ! default ;
+$ display4-size :                3.5 rem  ! default ;
+
+$ display1-weight :              300  ! por defecto ;
+$ display2-weight :              300  ! por defecto ;
+$ display3-weight :              300  ! por defecto ;
+$ display4-weight :              300  ! por defecto ;
+$ display-line-height :          $ headings-line-height  ! predeterminado ;
+
+$ lead-font-size :               $ font-size-base * 1.25  ! por defecto ;
+$ lead-font-weight :             300  ! por defecto ;
+
+$ small-font-size :              80 %  ! predeterminado ;
+
+$ text-muted :                   $ gray-600  ! predeterminado ;
+
+$ blockquote-small-color :       $ gray-600  ! predeterminado ;
+$ blockquote-small-font-size :   $ small-font-size  ! default ;
+$ blockquote-font-size :         $ font-size-base * 1.25  ! por defecto ;
+
+$ hr-border-color :              rgba ( $ black , .1 ) ! predeterminado ;
+$ hr-border-width :              $ border-width  ! predeterminado ;
+
+$ mark-padding :                 .2 em  ! default ;
+
+$ dt-font-weight :               $ font-weight-bold  ! predeterminado ;
+
+$ kbd-box-shadow :               recuadro 0  -.1 rem 0  rgba ( $ negro , .25 ) ! predeterminado ;
+$ nested-kbd-font-weight :       $ font-weight-bold  ! default ;
+
+$ list-inline-padding :          .5 rem  ! default ;
+
+$ mark-bg :                      # fcf8e3  ! predeterminado ;
+
+$ hr-margin-y :                  $ spacer  ! default ;
+
+
+// Mesas
+//
+// Personaliza el componente `.table` con valores básicos, cada uno usado en todas las variaciones de la tabla.
+
+$ table-cell-padding :           .75 rem  ! default ;
+$ table-cell-padding-sm :        .3 rem  ! default ;
+
+$ table-color :                  $ body-color  ! por defecto ;
+$ table-bg : null ! default ;
+$ table-accent-bg :              rgba ( $ black , .05 ) ! predeterminado ;
+$ table-hover-color :            $ table-color  ! predeterminado ;
+$ table-hover-bg :               rgba ( $ black , .075 ) ! predeterminado ;
+$ table-active-bg :              $ table-hover-bg  ! default ;
+
+$ table-border-width :           $ border-width  ! predeterminado ;
+$ table-border-color :           $ border-color  ! default ;
+
+$ table-head-bg :                $ gray-200  ! predeterminado ;
+$ table-head-color :             $ grey-700  ! por defecto ;
+
+$ table-dark-color :             $ white  ! por defecto ;
+$ table-dark-bg :                $ gray-800  ! predeterminado ;
+$ table-dark-accent-bg :         rgba ( $ white , .05 ) ! predeterminado ;
+$ table-dark-hover-color :       $ table-dark-color  ! predeterminado ;
+$ table-dark-hover-bg :          rgba ( $ white , .075 ) ! predeterminado ;
+$ table-dark-border-color :      aclarar ( $ table-dark-bg , 7.5 % ) ! predeterminado ;
+$ table-dark-color :             $ white  ! por defecto ;
+
+$ table-striped-order : impd ! default ;
+
+$ table-caption-color :          $ text-muted  ! predeterminado ;
+
+$ table-bg-level :               -9  ! default ;
+$ table-border-level :           -6  ! default ;
+
+
+// Botones + Formas
+//
+// Variables compartidas que se reasignan a las variables específicas `$ input-` y `$ btn-`.
+
+$ input-btn-padding-y :          .375 rem  ! default ;
+$ input-btn-padding-x :          .75 rem  ! default ;
+$ input-btn-font-family : null ! default ;
+$ input-btn-font-size :          $ font-size-base  ! predeterminado ;
+$ input-btn-line-height :        $ line-height-base  ! predeterminado ;
+
+$ input-btn-focus-width :        .2 rem  ! default ;
+$ input-btn-focus-color :        rgba ( $ component-active-bg , .25 ) ! predeterminado ;
+$ input-btn-focus-box-shadow :   0 0 0  $ input-btn-focus-width  $ input-btn-focus-color  ! predeterminado ;
+
+$ input-btn-padding-y-sm :       .25 rem  ! default ;
+$ input-btn-padding-x-sm :       .5 rem  ! default ;
+$ input-btn-font-size-sm :       $ font-size-sm  ! predeterminado ;
+$ input-btn-line-height-sm :     $ line-height-sm  ! predeterminado ;
+
+$ input-btn-padding-y-lg :       .5 rem  ! default ;
+$ input-btn-padding-x-lg :       1 rem  ! default ;
+$ input-btn-font-size-lg :       $ font-size-lg  ! default ;
+$ input-btn-line-height-lg :     $ line-height-lg  ! default ;
+
+$ input-btn-border-width :       $ border-width  ! predeterminado ;
+
+
+// Botones
+//
+// Para cada uno de los botones de Bootstrap, defina el texto, el fondo y el color del borde.
+
+$ btn-padding-y :                $ input-btn-padding-y  ! default ;
+$ btn-padding-x :                $ input-btn-padding-x  ! default ;
+$ btn-font-family :              $ input-btn-font-family  ! por defecto ;
+$ btn-font-size :                $ input-btn-font-size  ! predeterminado ;
+$ btn-line-height :              $ input-btn-line-height  ! predeterminado ;
+
+$ btn-padding-y-sm :             $ input-btn-padding-y-sm  ! predeterminado ;
+$ btn-padding-x-sm :             $ input-btn-padding-x-sm  ! predeterminado ;
+$ btn-font-size-sm :             $ input-btn-font-size-sm  ! predeterminado ;
+$ btn-line-height-sm :           $ input-btn-line-height-sm  ! predeterminado ;
+
+$ btn-padding-y-lg :             $ input-btn-padding-y-lg  ! default ;
+$ btn-padding-x-lg :             $ input-btn-padding-x-lg  ! default ;
+$ btn-font-size-lg :             $ input-btn-font-size-lg  ! default ;
+$ btn-line-height-lg :           $ input-btn-line-height-lg  ! default ;
+
+$ btn-border-width :             $ input-btn-border-width  ! predeterminado ;
+
+$ btn-font-weight :              $ font-weight-normal  ! predeterminado ;
+$ btn-box-shadow :               inserción 0 1 px 0  rgba ( $ blanco , .15 ), 0 1 px 1 px  rgba ( $ negro , .075 ) ! predeterminado ;
+$ btn-focus-width :              $ input-btn-focus-width  ! predeterminado ;
+$ btn-focus-box-shadow :         $ input-btn-focus-box-shadow  ! predeterminado ;
+$ btn-disabled-opacity :         .65  ! default ;
+$ btn-active-box-shadow :        recuadro 0 3 px 5 px  rgba ( $ negro , .125 ) ! predeterminado ;
+
+$ btn-link-disabled-color :      $ gray-600  ! predeterminado ;
+
+$ btn-block-spacing-y :          .5 rem  ! default ;
+
+// Permite personalizar el radio del botón independientemente del radio del borde global
+$ btn-border-radius :            $ border-radius  ! predeterminado ;
+$ btn-border-radius-lg :         $ border-radius-lg  ! default ;
+$ btn-border-radius-sm :         $ border-radius-sm  ! default ;
+
+$ BTN-transición : color de 0,15 s facilidad - en - hacia fuera, los antecedentes - color de 0,15 s facilidad - en - salir, frontera - color de 0,15 s facilidad - en - hacia fuera, caja - sombra 0,15 s facilidad - en - salir ! por defecto ;
+
+
+// Formularios
+
+$ label-margin-bottom :                    .5 rem  ! default ;
+
+$ input-padding-y :                        $ input-btn-padding-y  ! default ;
+$ input-padding-x :                        $ input-btn-padding-x  ! default ;
+$ input-font-family :                      $ input-btn-font-family  ! predeterminado ;
+$ input-font-size :                        $ input-btn-font-size  ! predeterminado ;
+$ input-font-weight :                      $ font-weight-base  ! predeterminado ;
+$ input-line-height :                      $ input-btn-line-height  ! predeterminado ;
+
+$ input-padding-y-sm :                     $ input-btn-padding-y-sm  ! default ;
+$ input-padding-x-sm :                     $ input-btn-padding-x-sm  ! predeterminado ;
+$ input-font-size-sm :                     $ input-btn-font-size-sm  ! predeterminado ;
+$ input-line-height-sm :                   $ input-btn-line-height-sm  ! predeterminado ;
+
+$ input-padding-y-lg :                     $ input-btn-padding-y-lg  ! default ;
+$ input-padding-x-lg :                     $ input-btn-padding-x-lg  ! default ;
+$ input-font-size-lg :                     $ input-btn-font-size-lg  ! default ;
+$ input-line-height-lg :                   $ input-btn-line-height-lg  ! default ;
+
+$ input-bg :                               $ white  ! por defecto ;
+$ input-disabled-bg :                      $ gray-200  ! predeterminado ;
+
+$ input-color :                            $ grey-700  ! por defecto ;
+$ input-border-color :                     $ grey-400  ! predeterminado ;
+$ input-border-width :                     $ input-btn-border-width  ! predeterminado ;
+$ input-box-shadow :                       recuadro 0 1 px 1 px  rgba ( $ negro , .075 ) por defecto ;
+
+$ input-border-radius :                    $ border-radius  ! predeterminado ;
+$ input-border-radius-lg :                 $ border-radius-lg  ! default ;
+$ input-border-radius-sm :                 $ border-radius-sm  ! default ;
+
+$ input-focus-bg :                         $ input-bg  ! predeterminado ;
+$ input-focus-border-color :               aclarar ( $ component-active-bg , 25 % ) ! predeterminado ;
+$ input-focus-color :                      $ input-color  ! predeterminado ;
+$ input-focus-width :                      $ input-btn-focus-width  ! predeterminado ;
+$ entrada de enfoque-box-shadow :                 $ de entrada-btn-enfoque-box-shadow  ! predeterminado ;
+
+$ input-placeholder-color :                $ gray-600  ! predeterminado ;
+$ input-plaintext-color :                  $ body-color  ! por defecto ;
+
+$ input-height-border :                    $ input-border-width * 2  ! predeterminado ;
+
+$ input-height-inner :                     calc ( # { $ input-line-height * 1 em }  +  # { $ input-padding-y * 2 } ) ! predeterminado ;
+$ input-height-inner-half :                calc ( # { $ input-line-height * .5 em }  +  # { $ input-padding-y } ) ! predeterminado ;
+$ input-height-inner-quarter :             calc ( # { $ input-line-height * .25 em }  +  # { $ input-padding-y / 2 } ) ! predeterminado ;
+
+$ input-height :                           calc ( # { $ input-line-height * 1 em }  +  # { $ input-padding-y * 2 }  +  # { $ input-height-border } ) ! default ;
+$ input-height-sm :                        calc ( # { $ input-line-height-sm * 1 em }  +  # { $ input-btn-padding-y-sm * 2 }  +  # { $ input-height-border } ) ! por defecto ;
+$ input-height-lg :                        calc ( # { $ input-line-height-lg * 1 em }  +  # { $ input-btn-padding-y-lg * 2 }  +  # { $ input-height-border } ) ! por defecto ;
+
+$ de entrada a la transición : Frontera - color de 0,15 s facilidad - en - hacia fuera, caja - sombra 0,15 s facilidad - en - salir por defecto! ;
+
+$ form-text-margin-top :                   .25 rem  ! default ;
+
+$ form-check-input-input-gutter :                1.25 rem  ! default ;
+$ form-check-input-margin-y :              .3 rem  ! default ;
+$ form-check-input-margin-x :              .25 rem  ! default ;
+
+$ form-check-inline-margin-x :             .75 rem  ! default ;
+$ form-check-inline-input-margin-x :       .3125 rem  ! default ;
+
+$ form-grid-gutter-width :                 10 px  ! default ;
+$ form-group-margin-bottom :               1 rem  ! default ;
+
+$ input-group-addon-color :                $ input-color  ! predeterminado ;
+$ input-group-addon-bg :                   $ gray-200  ! predeterminado ;
+$ input-group-addon-border-color :         $ input-border-color  ! predeterminado ;
+
+$ personalizados formas de transición : Fondo - color de 0,15 s facilidad - en - salir, frontera - color de 0,15 s facilidad - en - hacia fuera, caja - sombra 0,15 s facilidad - en - salir por defecto! ;
+
+$ custom-control-gutter :                  .5 rem  ! default ;
+$ custom-control-spacer-x :                1 rem  ! default ;
+
+$ custom-control-indicator-size :          1 rem  ! default ;
+$ custom-control-indicator-bg :            $ input-bg  ! default ;
+
+$ custom-control-indicator-bg-size :       50 % 50 %  ! predeterminado ;
+$ custom-control-indicator-box-shadow :    $ input-box-shadow  ! predeterminado ;
+$ custom-control-indicator-border-color : $ gray-500  ! predeterminado ;
+$ custom-control-indicator-border-width : $ input-border-width  ! predeterminado ;
+
+$ custom-control-indicator-disabled-bg :           $ input-disabled-bg  ! predeterminado ;
+$ custom-control-label-disabled-color :            $ gray-600  ! predeterminado ;
+
+$ custom-control-indicator-checked-color :         $ component-active-color  ! default ;
+$ custom-control-indicator-checked-bg :            $ component-active-bg  ! default ;
+$ custom-control-indicator-checked-disabled-bg :   rgba ( theme-color ( " primary " ), .5 ) ! predeterminado ;
+$ custom-control-indicator-checked-box-shadow :    none  ! predeterminado ;
+$ custom-control-indicator-checked-border-color : $ custom-control-indicator-checked-bg  ! default ;
+
+$ custom-control-indicator-focus-box-shadow :      $ input-focus-box-shadow-sombra  ! predeterminado ;
+$ custom-control-indicator-focus-border-color :    $ input-focus-border-color  ! predeterminado ;
+
+$ custom-control-indicator-active-color :          $ component-active-color  ! default ;
+$ custom-control-indicator-active-bg :             lighten ( $ component-active-bg , 35 % ) ! predeterminado ;
+$ custom-control-indicator-active-box-shadow :     none  ! predeterminado ;
+$ custom-control-indicator-active-border-color :   $ custom-control-indicator-active-bg  ! default ;
+
+$ custom-checkbox-indicator-border-radius :        $ border-radius  ! default ;
+$ custom-checkbox-indicator-icon-checked :         str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' viewBox = '0 0 8 8 '% 3e% 3cpath fill =' # { $ custom-control-indicator-color-color } 'd =' M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z '/% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! Predeterminado ;
+
+$ custom-checkbox-indicator-indeterminate-bg :            $ component-active-bg  ! default ;
+$ custom-checkbox-indicator-indeterminate-color :         $ custom-control-indicator-check-color  ! predeterminado ;
+$ custom-checkbox-indicator-icon-indeterminate :          str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' viewBox = '0 0 4 4 '% 3e% 3cpath stroke =' # { $ custom-checkbox-indicator-indeterminate-color } 'd =' M0 2h4 '/% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! por defecto ;
+$ custom-checkbox-indicator-indeterminate-box-shadow :    none  ! default ;
+$ custom-checkbox-indicator-indeterminate-border-color : $ custom-checkbox-indicator-indeterminate-bg  ! default ;
+
+$ custom-radio-indicator-border-radius :           50 %  ! predeterminado ;
+$ custom-radio-indicator-icon-checked :            str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' viewBox = '- 4 -4 8 8 '% 3e% 3ccircle r =' 3 'fill =' # { $ custom-control-indicator-check-color } '/% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! por defecto ;
+
+$ custom-switch-width :                            $ custom-control-indicator-size * 1.75  ! predeterminado ;
+$ custom-switch-indicator-border-radius :          $ custom-control-indicator-size / 2  ! default ;
+$ custom-switch-indicator-size :                   calc ( # { $ custom-control-indicator-size }  -  # { $ custom-control-indicator-border-width * 4 } ) , por defecto ;
+
+$ custom-select-padding-y :            $ input-padding-y  ! default ;
+$ custom-select-padding-x :            $ input-padding-x  ! default ;
+$ custom-select-font-family :          $ input-font-family  ! predeterminado ;
+$ custom-select-font-size :            $ input-font-size  ! predeterminado ;
+$ custom-select-height :               $ input-height  ! predeterminado ;
+$ relleno de indicador de selección personalizado :    1 rem  ! predeterminado ; // Relleno adicional para tener en cuenta la presencia del indicador basado en imagen de fondo
+$ custom-select-font-weight :          $ input-font-weight  ! predeterminado ;
+$ custom-select-line-height :          $ input-line-height  ! predeterminado ;
+$ custom-select-color :                $ input-color  ! predeterminado ;
+$ custom-select-disabled-color :       $ gray-600  ! predeterminado ;
+$ custom-select-bg :                   $ input-bg  ! default ;
+$ custom-select-disabled-bg :          $ gray-200  ! predeterminado ;
+$ custom-select-bg-size :              8 px 10 px  ! predeterminado ; // En píxeles porque las dimensiones de la imagen.
+$ custom-select-indicator-color :      $ gray-800  ! predeterminado ;
+$ custom-select-indicator :            str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' viewBox = '0 0 4 5'% 3e% 3cpath fill = ' # { $ custom-select-indicator-color } ' d = 'M2 0L0 2h4zm0 5L0 3h4z' /% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! Default ;
+$ custom-select-background :           $ custom-select-select  no-repeat  right  $ custom-select-padding-x  center / $ custom-select-bg-size  ! default ; // Se usa para que podamos tener múltiples elementos de fondo (por ejemplo, flecha e ícono de retroalimentación)
+
+$ costumbre-select-retroalimentación-icono-padding-right : Calc ( (1 em  +  # { 2 * $ costumbre-select-padding-y } ) * 3 / 4 + # { $ costumbre-select-padding-x + $ personalizada -seleccionar-indicador-relleno } ) ! por defecto ;
+$ costumbre-select-retroalimentación-icono-posición :       centro  derecha ( $ costumbre-select-padding-x  +  $ costumbre-select-indicador-padding ) por defecto! ;
+$ custom-select-feedback-icon-size :           $ input-height-inner-half  $ input-height-inner-half  ! predeterminado ;
+
+$ custom-select-border-width :         $ input-border-width  ! predeterminado ;
+$ custom-select-border-color :         $ input-border-color  ! default ;
+$ custom-select-border-radius :        $ border-radius  ! default ;
+$ custom-select-box-shadow :           recuadro 0 1 px 2 px  rgba ( $ black , .075 ) ! predeterminado ;
+
+$ custom-select-focus-border-color :   $ input-focus-border-color  ! predeterminado ;
+$ custom-select-focus-width :          $ input-focus-width  ! default ;
+$ custom-select-focus-box-shadow :     0 0 0  $ custom-select-focus-focus-width  $ input-btn-focus-color  ! predeterminado ;
+
+$ custom-select-padding-y-sm :         $ input-padding-y-sm  ! default ;
+$ custom-select-padding-x-sm :         $ input-padding-x-sm  ! predeterminado ;
+$ custom-select-font-size-sm :         $ input-font-size-sm  ! predeterminado ;
+$ custom-select-height-sm :            $ input-height-sm  ! default ;
+
+$ custom-select-padding-y-lg :         $ input-padding-y-lg  ! default ;
+$ custom-select-padding-x-lg :         $ input-padding-x-lg  ! default ;
+$ custom-select-font-size-lg :         $ input-font-size-lg  ! default ;
+$ custom-select-height-lg :            $ input-height-lg  ! default ;
+
+$ ancho de seguimiento de rango personalizado :           100 %  ! predeterminado ;
+$ custom-range-track-height :          .5 rem  ! default ;
+$ custom-range-track-cursor :          pointer  ! default ;
+$ custom-range-track-bg :              $ gray-300  ! predeterminado ;
+$ custom-range-track-border-radius :   1 rem  ! default ;
+$ custom-range-track-box-shadow :      recuadro 0 .25 rem .25 rem  rgba ( $ black , .1 ) ! predeterminado ;
+
+$ custom-range-thumb-width :                    1 rem  ! default ;
+$ custom-range-thumb-height :                   $ custom-range-thumb-width  ! predeterminado ;
+$ custom-range-thumb-bg :                       $ component-active-bg  ! default ;
+$ custom-range-thumb-border :                   0  ! default ;
+$ custom-range-thumb-border-radius :            1 rem  ! default ;
+$ custom-range-thumb-box-shadow :               0 .1 rem .25 rem  rgba ( $ black , .1 ) ! predeterminado ;
+$ custom-range-thumb-focus-box-shadow :         0 0 0 1 px  $ body-bg , $ input-focus-box-shadow  ! predeterminado ;
+$ custom-range-thumb-focus-box-shadow-width :   $ input-focus-width  ! predeterminado ; // Para el problema de la sombra del cuadro de enfoque en IE / Edge
+$ custom-range-thumb-active-bg :                lighten ( $ component-active-bg , 35 % ) ! predeterminado ;
+$ custom-range-thumb-disabled-bg :              $ gray-500  ! predeterminado ;
+
+$ custom-file-height :                 $ input-height  ! predeterminado ;
+$ custom-file-height-inner :           $ input-height-inner  ! default ;
+$ custom-file-focus-border-color :     $ input-focus-border-color  ! predeterminado ;
+$ custom-file-focus-box-shadow :       $ input-focus-box-shadow-sombra  ! predeterminado ;
+$ custom-file-disabled-bg :            $ input-disabled-bg  ! default ;
+
+$ custom-file-padding-y :              $ input-padding-y  ! default ;
+$ custom-file-padding-x :              $ input-padding-x  ! default ;
+$ custom-file-line-height :            $ input-line-height  ! predeterminado ;
+$ custom-file-font-family :            $ input-font-family  ! predeterminado ;
+$ custom-file-font-weight :            $ input-font-weight  ! predeterminado ;
+$ custom-file-color :                  $ input-color  ! predeterminado ;
+$ custom-file-bg :                     $ input-bg  ! default ;
+$ custom-file-border-width :           $ input-border-width  ! predeterminado ;
+$ custom-file-border-color :           $ input-border-color  ! predeterminado ;
+$ custom-file-border-radius :          $ input-border-radius  ! default ;
+$ custom-file-box-shadow :             $ input-box-shadow  ! predeterminado ;
+$ custom-file-button-color :           $ custom-file-color  ! predeterminado ;
+$ custom-file-button-bg :              $ input-group-addon-bg  ! default ;
+$ texto-archivo personalizado :
+  es: " navegar "
+) ! por defecto ;
+
+
+// Validación de formulario
+
+$ form-feedback-margin-top :           $ form-text-margin-top  ! predeterminado ;
+$ form-feedback-font-size :            $ small-font-size  ! predeterminado ;
+$ form-feedback-valid-color :          theme-color ( " success " ) ! predeterminado ;
+$ form-feedback-invalid-color :        theme-color ( " danger " ) ! predeterminado ;
+
+$ form-feedback-icon-valid-color :     $ form-feedback-valid-color  ! predeterminado ;
+$ form-feedback-icon-valid :           str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' viewBox = '0 0 8 8 '% 3e% 3cpath fill =' # { $ form-feedback-icon-valid-color } 'd =' M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z '/% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! por defecto ;
+$ form-feedback-icon-invalid-color :   $ form-feedback-invalid-color  ! predeterminado ;
+$ form-feedback-icon-invalid :         str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' fill = ' # { $ form -feedback-icon-invalid-color } 'viewBox =' - 2 -2 7 7 '% 3e% 3cpath stroke =' # { $ form-feedback-icon-invalid-color } 'd =' M0 0l3 3m0-3L0 3 '/% 3e% 3ccircle r ='. 5 '/% 3e% 3ccircle cx =' 3 'r ='. 5 '/% 3e% 3ccircle cy =' 3 'r ='. 5 '/% 3e% 3ccircle cx = '3' cy = '3' r = '. 5' /% 3e% 3c / svg% 3E " ), " # " , " % 23 " ) ! Predeterminado ;
+
+$ form-validation-states : () ! default ;
+// stylelint-disable-next-line scss / dollar-variable-default
+$ form-validation-states : map-merge (
+  (
+    " válido " :  (
+      " color " :  $ form-feedback-valid-color ,
+      " icon " :  $ form-feedback-icon-valid
+    )
+    " inválido " : (
+      " color " : $ form-feedback-invalid-color ,
+      " icon " : $ form-feedback-icon-invalid
+    )
+  )
+  $ form-validation-states
+);
+
+// lista maestra del índice Z
+//
+// Advertencia: Evite personalizar estos valores. Se utilizan para una vista de pájaro
+// de los componentes que dependen del eje z y están diseñados para que todos trabajen juntos.
+
+$ zindex-dropdown :                    1000  ! default ;
+$ zindex-sticky :                      1020  ! por defecto ;
+$ zindex-fixed :                       1030  ! por defecto ;
+$ zindex-modal-backdrop :              1040  ! por defecto ;
+$ zindex-modal :                       1050  ! por defecto ;
+$ zindex-popover :                     1060  ! por defecto ;
+$ zindex-tooltip :                     1070  ! por defecto ;
+
+
+// Navs
+
+$ nav-link-padding-y :                 .5 rem  ! default ;
+$ nav-link-padding-x :                 1 rem  ! default ;
+$ nav-link-disabled-color :            $ gray-600  ! predeterminado ;
+
+$ nav-tabs-border-color :              $ gray-300  ! predeterminado ;
+$ nav-tabs-border-width :              $ border-width  ! predeterminado ;
+$ nav-tabs-border-radius :             $ border-radius  ! default ;
+$ nav-tabs-link-hover-border-color :   $ gray-200  $ grey-200  $ nav-tabs-border-color  ! predeterminado ;
+$ nav-tabs-link-active-color :         $ grey-700  ! predeterminado ;
+$ nav-tabs-link-active-bg :            $ body-bg  ! default ;
+$ nav-tabs-link-active-border-color : $ gray-300  $ grey-300  $ nav-tabs-link-active-bg  ! predeterminado ;
+
+$ nav-pills-border-radius :            $ border-radius  ! predeterminado ;
+$ nav-pills-link-active-color :        $ component-active-color  ! predeterminado ;
+$ nav-pills-link-active-bg :           $ component-active-bg  ! default ;
+
+$ nav-divider-color :                  $ grey-200  ! predeterminado ;
+$ nav-divider-margin-y :               $ spacer / 2  ! default ;
+
+
+// Navbar
+
+$ navbar-padding-y :                   $ spacer / 2  ! default ;
+$ navbar-padding-x :                   $ spacer  ! default ;
+
+$ navbar-nav-link-padding-x :          .5 rem  ! default ;
+
+$ navbar-brand-font-size :             $ font-size-lg  ! default ;
+// Calcular el relleno de la marca navbar-y para que la marca navbar tenga la misma altura que navbar-text y nav-link
+$ nav-link-height :                    $ font-size-base * $ line-height-base + $ nav-link-padding-y * 2  ! predeterminado ;
+$ navbar-brand-height :                $ navbar-brand-font-size * $ line-height-base  ! predeterminado ;
+$ navbar-brand-padding-y : ( $ nav-link-height - $ navbar-brand-height ) / 2  ! predeterminado ;
+
+$ navbar-toggler-padding-y :           .25 rem  ! default ;
+$ navbar-toggler-padding-x :           .75 rem  ! default ;
+$ navbar-toggler-font-size :           $ font-size-lg  ! default ;
+$ navbar-toggler-border-radius :       $ btn-border-radius  ! predeterminado ;
+
+$ navbar-dark-color :                  rgba ( $ white , .5 ) ! predeterminado ;
+$ navbar-dark-hover-color :            rgba ( $ white , .75 ) ! predeterminado ;
+$ navbar-dark-active-color :           $ white  ! predeterminado ;
+$ navbar-dark-disabled-color :         rgba ( $ white , .25 ) ! predeterminado ;
+$ navbar-dark-toggler-icon-bg :        str-replace ( url ( " datos: imagen / svg + xml,% 3csvg viewBox = '0 0 30 30' xmlns = 'http: //www.w3.org/2000 / svg '% 3e% 3cpath stroke =' # { $ navbar-dark-color } 'stroke-width =' 2 'stroke-linecap =' round 'stroke-miterlimit = '10' d = 'M4 7h22M4 15h22M4 23h22' / % 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! Predeterminado ;
+$ navbar-dark-toggler-border-color :   rgba ( $ white , .1 ) ! predeterminado ;
+
+$ navbar-light-color :                 rgba ( $ black , .5 ) ! predeterminado ;
+$ navbar-light-hover-color :           rgba ( $ black , .7 ) ! predeterminado ;
+$ navbar-light-active-color :          rgba ( $ black , .9 ) ! predeterminado ;
+$ navbar-light-disabled-color :        rgba ( $ black , .3 ) ! predeterminado ;
+$ navbar-light-toggler-icon-bg :       str-replace ( url ( " datos: imagen / svg + xml,% 3csvg viewBox = '0 0 30 30' xmlns = 'http: //www.w3.org/2000 / svg '% 3e% 3cpath stroke =' # { $ navbar-light-color } 'stroke-width =' 2 'stroke-linecap =' round 'stroke-miterlimit = '10' d = 'M4 7h22M4 15h22M4 23h22' / % 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! Predeterminado ;
+$ navbar-light-toggler-border-color : rgba ( $ black , .1 ) ! predeterminado ;
+
+$ navbar-light-brand-color :                 $ navbar-light-active-color  ! predeterminado ;
+$ navbar-light-brand-hover-color :           $ navbar-light-active-color  ! predeterminado ;
+$ navbar-dark-brand-color :                  $ navbar-dark-active-color  ! predeterminado ;
+$ navbar-dark-brand-hover-color :            $ navbar-dark-active-color  ! predeterminado ;
+
+
+// Listas deplegables
+//
+// Contenedor y contenidos del menú desplegable.
+
+$ dropdown-min-width :                 10 rem  ! default ;
+$ dropdown-padding-y :                 .5 rem  ! default ;
+$ dropdown-spacer :                    .125 rem  ! default ;
+$ dropdown-font-size :                 $ font-size-base  ! predeterminado ;
+$ dropdown-color :                     $ body-color  ! por defecto ;
+$ dropdown-bg :                        $ white  ! default ;
+$ dropdown-border-color :              rgba ( $ black , .15 ) ! predeterminado ;
+$ dropdown-border-radius :             $ border-radius  ! predeterminado ;
+$ dropdown-border-width :              $ border-width  ! predeterminado ;
+$ dropdown-inner-border-radius :       calc ( # { $ dropdown-border-radius }  -  # { $ dropdown-border-width } ) ! predeterminado ;
+$ dropdown-divider-bg :                $ gray-200  ! predeterminado ;
+$ dropdown-divider-margin-y :          $ nav-divider-margin-y  ! default ;
+$ dropdown-box-shadow :                0 .5 rem 1 rem  rgba ( $ black , .175 ) ! predeterminado ;
+
+$ dropdown-link-color :                $ gray-900  ! predeterminado ;
+$ dropdown-link-hover-color : se          oscurece ( $ gray-900 , 5 % ) predeterminado ;
+$ dropdown-link-hover-bg :             $ gray-100  ! predeterminado ;
+
+$ dropdown-link-active-color :         $ component-active-color  ! default ;
+$ dropdown-link-active-bg :            $ component-active-bg  ! default ;
+
+$ dropdown-link-disabled-color :       $ gray-600  ! predeterminado ;
+
+$ dropdown-item-padding-y :            .25 rem  ! default ;
+$ dropdown-item-padding-x :            1.5 rem  ! default ;
+
+$ dropdown-header-color :              $ gray-600  ! predeterminado ;
+
+
+// Paginación
+
+$ pagination-padding-y :               .5 rem  ! default ;
+$ pagination-padding-x :               .75 rem  ! default ;
+$ pagination-padding-y-sm :            .25 rem  ! default ;
+$ pagination-padding-x-sm :            .5 rem  ! default ;
+$ pagination-padding-y-lg :            .75 rem  ! default ;
+$ pagination-padding-x-lg :            1.5 rem  ! default ;
+$ pagination-line-height :             1.25  ! predeterminado ;
+
+$ pagination-color :                   $ link-color  ! predeterminado ;
+$ pagination-bg :                      $ white  ! default ;
+$ pagination-border-width :            $ border-width  ! predeterminado ;
+$ pagination-border-color :            $ gray-300  ! predeterminado ;
+
+$ paginación de enfoque-box-shadow :        $ de entrada-btn-enfoque-box-shadow  ! predeterminado ;
+$ pagination-focus-outline :           0  ! por defecto ;
+
+$ pagination-hover-color :             $ link-hover-color  ! predeterminado ;
+$ pagination-hover-bg :                $ gray-200  ! predeterminado ;
+$ pagination-hover-border-color :      $ gray-300  ! predeterminado ;
+
+$ pagination-active-color :            $ component-active-color  ! predeterminado ;
+$ pagination-active-bg :               $ component-active-bg  ! default ;
+$ pagination-active-border-color :     $ pagination-active-bg  ! default ;
+
+$ pagination-disabled-color :          $ gray-600  ! predeterminado ;
+$ pagination-disabled-bg :             $ white  ! predeterminado ;
+$ pagination-disabled-border-color :   $ gray-300  ! predeterminado ;
+
+
+// Jumbotron
+
+$ jumbotron-padding :                  2 rem  ! default ;
+$ jumbotron-color : null ! default ;
+$ jumbotron-bg :                       $ grey-200  ! predeterminado ;
+
+
+// Tarjetas
+
+$ card-spacer-y :                      .75 rem  ! default ;
+$ card-spacer-x :                      1.25 rem  ! default ;
+$ card-border-width :                  $ border-width  ! predeterminado ;
+$ card-border-radius :                 $ border-radius  ! predeterminado ;
+$ card-border-color :                  rgba ( $ black , .125 ) ! predeterminado ;
+$ card-inner-border-radius :           calc ( # { $ card-border-radius }  -  # { $ card-border-width } ) ! predeterminado ;
+$ card-cap-bg :                        rgba ( $ black , .03 ) ! predeterminado ;
+$ card-cap-color : null ! predeterminado ;
+$ card-color : null ! predeterminado ;
+$ card-bg :                            $ white  ! por defecto ;
+
+$ card-img-overlay-padding :           1.25 rem  ! default ;
+
+$ card-group-margin :                  $ grid-gutter-width / 2  ! default ;
+$ card-deck-margin :                   $ card-group-margin  ! default ;
+
+$ card-columns-count :                 3  ! default ;
+$ card-columns-gap :                   1.25 rem  ! default ;
+$ card-columns-margin :                $ card-spacer-y  ! default ;
+
+
+// Información sobre herramientas
+
+$ tooltip-font-size :                  $ font-size-sm  ! predeterminado ;
+$ tooltip-max-width :                  200 px  ! por defecto ;
+$ tooltip-color :                      $ white  ! por defecto ;
+$ tooltip-bg :                         $ black  ! default ;
+$ tooltip-border-radius :              $ border-radius  ! predeterminado ;
+$ tooltip-opacity :                    .9  ! default ;
+$ tooltip-padding-y :                  .25 rem  ! default ;
+$ tooltip-padding-x :                  .5 rem  ! default ;
+$ tooltip-margin :                     0  ! default ;
+
+$ tooltip-arrow-width :                .8 rem  ! default ;
+$ tooltip-arrow-height :               .4 rem  ! default ;
+$ tooltip-arrow-color :                $ tooltip-bg  ! default ;
+
+// La información sobre herramientas del formulario debe venir después de la información sobre herramientas regular
+$ form-feedback-tooltip-padding-y :      $ tooltip-padding-y  ! default ;
+$ form-feedback-tooltip-padding-x :      $ tooltip-padding-x  ! default ;
+$ form-feedback-tooltip-font-size :      $ tooltip-font-size  ! predeterminado ;
+$ form-feedback-tooltip-line-height :    $ line-height-base  ! predeterminado ;
+$ form-feedback-tooltip-opacity :        $ tooltip-opacity  ! por defecto ;
+$ form-feedback-tooltip-border-radius : $ tooltip-border-radius  ! predeterminado ;
+
+
+// Popovers
+
+$ popover-font-size :                  $ font-size-sm  ! predeterminado ;
+$ popover-bg :                         $ white  ! por defecto ;
+$ popover-max-width :                  276 px  ! predeterminado ;
+$ popover-border-width :               $ border-width  ! predeterminado ;
+$ popover-border-color :               rgba ( $ black , .2 ) ! predeterminado ;
+$ popover-border-radius :              $ border-radius-lg  ! default ;
+$ popover-box-shadow :                 0 .25 rem .5 rem  rgba ( $ black , .2 ) ! predeterminado ;
+
+$ popover-header-bg :                  darken ( $ popover-bg , 3 % ) ! predeterminado ;
+$ popover-header-color :               $ headings-color  ! predeterminado ;
+$ popover-header-padding-y :           .5 rem  ! default ;
+$ popover-header-padding-x :           .75 rem  ! default ;
+
+$ popover-body-color :                 $ body-color  ! por defecto ;
+$ popover-body-padding-y :             $ popover-header-padding-y  ! default ;
+$ popover-body-padding-x :             $ popover-header-padding-x  ! default ;
+
+$ popover-arrow-width :                1 rem  ! default ;
+$ popover-arrow-height :               .5 rem  ! default ;
+$ popover-arrow-color :                $ popover-bg  ! predeterminado ;
+
+$ popover-arrow-outer-color :          fade-in ( $ popover-border-color , .05 ) ! predeterminado ;
+
+
+// tostadas
+
+$ toast-max-width :                    350 px  ! predeterminado ;
+$ toast-padding-x :                    .75 rem  ! default ;
+$ toast-padding-y :                    .25 rem  ! default ;
+$ toast-font-size :                    .875 rem  ! default ;
+$ toast-color : null ! predeterminado ;
+$ toast-background-color :             rgba ( $ white , .85 ) ! predeterminado ;
+$ toast-border-width :                 1 px  ! predeterminado ;
+$ toast-border-color :                 rgba ( 0, 0, 0 , .1 ) ! por defecto ;
+$ toast-border-radius :                .25 rem  ! default ;
+$ toast-box-shadow :                   0 .25 rem .75 rem  rgba ( $ black , .1 ) ! predeterminado ;
+
+$ toast-header-color :                 $ gray-600  ! predeterminado ;
+$ toast-header-background-color :      rgba ( $ white , .85 ) ! predeterminado ;
+$ toast-header-border-color :          rgba ( 0, 0, 0 , .05 ) ! predeterminado ;
+
+
+// Insignias
+
+$ badge-font-size :                    75 %  ! por defecto ;
+$ badge-font-weight :                  $ font-weight-bold  ! predeterminado ;
+$ badge-padding-y :                    .25 em  ! default ;
+$ badge-padding-x :                    .4 em  ! default ;
+$ badge-border-radius :                $ border-radius  ! predeterminado ;
+
+$ badge-transition :                   $ btn-transition  ! predeterminado ;
+$ badge-focus-width :                  $ input-btn-focus-width  ! predeterminado ;
+
+$ badge-pill-padding-x :               .6 em  ! default ;
+// Use un valor más alto de lo normal para asegurar bordes completamente redondeados cuando
+// personalizando el relleno o el tamaño de letra en las etiquetas.
+$ badge-pill-border-radius :           10 rem  ! default ;
+
+
+// Modales
+
+// Relleno aplicado al cuerpo modal.
+$ modal-inner-padding :                1 rem  ! default ;
+
+$ modal-dialog-margin :                .5 rem  ! default ;
+$ modal-dialog-margin-y-sm-up :        1.75 rem  ! default ;
+
+$ modal-title-line-height :            $ line-height-base  ! predeterminado ;
+
+$ modal-content-color : null ! default ;
+$ modal-content-bg :                   $ white  ! default ;
+$ modal-content-border-color :         rgba ( $ black , .2 ) ! predeterminado ;
+$ modal-content-border-width :         $ border-width  ! predeterminado ;
+$ modal-content-border-radius :        $ border-radius-lg  ! default ;
+$ modal-content-box-shadow-xs :        0 .25 rem .5 rem  rgba ( $ black , .5 ) ! predeterminado ;
+$ modal-content-box-shadow-sm-up :     0 .5 rem 1 rem  rgba ( $ black , .5 ) ! predeterminado ;
+
+$ modal-backdrop-bg :                  $ black  ! predeterminado ;
+$ modal-backdrop-opacity :             .5  ! default ;
+$ modal-header-border-color :          $ border-color  ! predeterminado ;
+$ modal-footer-border-color :          $ modal-header-border-color  ! predeterminado ;
+$ modal-header-border-width :          $ modal-content-border-width  defecto! ;
+$ modal-footer-border-width :          $ modal-header-border-width  ! predeterminado ;
+$ modal-header-padding-y :             1 rem  ! default ;
+$ modal-header-padding-x :             1 rem  ! default ;
+$ modal-header-padding :               $ modal-header-padding-y  $ modal-header-padding-x  ! default ; // Mantener esto por compatibilidad con versiones anteriores
+
+$ modal-xl :                           1140 px  ! predeterminado ;
+$ modal-lg :                           800 px  ! por defecto ;
+$ modal-md :                           500 px  ! por defecto ;
+$ modal-sm :                           300 px  ! por defecto ;
+
+$ modal-fade-transform :               translate ( 0 , -50 px ) ! predeterminado ;
+$ modal-show-transform :               none  ! default ;
+$ modalidad de transición : transformar .3 s easy - out ! default ;
+
+
+// Alertas
+//
+// Definir los colores de alerta, el radio del borde y el relleno.
+
+$ alert-padding-y :                    .75 rem  ! default ;
+$ alert-padding-x :                    1.25 rem  ! default ;
+$ alert-margin-bottom :                1 rem  ! default ;
+$ alert-border-radius :                $ border-radius  ! predeterminado ;
+$ alert-link-font-weight :             $ font-weight-bold  ! predeterminado ;
+$ alert-border-width :                 $ border-width  ! predeterminado ;
+
+$ alert-bg-level :                     -10  ! predeterminado ;
+$ alert-border-level :                 -9  ! default ;
+$ alert-color-level :                  6  ! default ;
+
+
+// Barras de progreso
+
+$ progress-height :                    1 rem  ! default ;
+$ progress-font-size :                 $ font-size-base * .75  ! por defecto ;
+$ progress-bg :                        $ grey-200  ! predeterminado ;
+$ progress-border-radius :             $ border-radius  ! predeterminado ;
+$ progress-box-shadow :                inserción 0 .1 rem .1 rem  rgba ( $ black , .1 ) ! predeterminado ;
+$ progress-bar-color :                 $ white  ! por defecto ;
+$ progress-bar-bg :                    theme-color ( " primary " ) ! default ;
+$ progress-bar-animation-timing :      1 s lineal infinito ! predeterminado ;
+$ progress-bar-transición : ancho .6 s ¡ facilidad ! predeterminado ;
+
+
+// grupo de lista
+
+$ list-group-color : null ! default ;
+$ list-group-bg :                      $ white  ! por defecto ;
+$ list-group-border-color :            rgba ( $ black , .125 ) ! predeterminado ;
+$ list-group-border-width :            $ border-width  ! predeterminado ;
+$ list-group-border-radius :           $ border-radius  ! predeterminado ;
+
+$ list-group-item-padding-y :          .75 rem  ! default ;
+$ list-group-item-padding-x :          1.25 rem  ! default ;
+
+$ list-group-hover-bg :                $ gray-100  ! predeterminado ;
+$ list-group-active-color :            $ component-active-color  ! predeterminado ;
+$ list-group-active-bg :               $ component-active-bg  ! default ;
+$ list-group-active-border-color :     $ list-group-active-bg  ! default ;
+
+$ list-group-disabled-color :          $ gray-600  ! predeterminado ;
+$ list-group-disabled-bg :             $ list-group-bg  ! predeterminado ;
+
+$ list-group-action-color :            $ gray-700  ! predeterminado ;
+$ list-group-action-hover-color :      $ list-group-action-color  ! predeterminado ;
+
+$ list-group-action-active-color :     $ body-color  ! default ;
+$ list-group-action-active-bg :        $ gray-200  ! predeterminado ;
+
+
+// miniaturas de imágenes
+
+$ thumbnail-padding :                  .25 rem  ! default ;
+$ thumbnail-bg :                       $ body-bg  ! por defecto ;
+$ thumbnail-border-width :             $ border-width  ! predeterminado ;
+$ thumbnail-border-color :             $ gray-300  ! predeterminado ;
+$ thumbnail-border-radius :            $ border-radius  ! predeterminado ;
+$ thumbnail-box-shadow :               0 1 px 2 px  rgba ( $ black , .075 ) ! predeterminado ;
+
+
+// Figuras
+
+$ figure-caption-font-size :           90 %  ! predeterminado ;
+$ figure-caption-color :               $ gray-600  ! predeterminado ;
+
+
+// Migas de pan
+
+$ breadcrumb-padding-y :               .75 rem  ! default ;
+$ breadcrumb-padding-x :               1 rem  ! default ;
+$ breadcrumb-item-padding :            .5 rem  ! default ;
+
+$ breadcrumb-margin-bottom :           1 rem  ! default ;
+
+$ breadcrumb-bg :                      $ gray-200  ! predeterminado ;
+$ breadcrumb-divider-color :           $ gray-600  ! por defecto ;
+$ breadcrumb-active-color :            $ gray-600  ! por defecto ;
+$ breadcrumb-divider :                 quote ( " / " ) ! default ;
+
+$ breadcrumb-border-radius :           $ border-radius  ! predeterminado ;
+
+
+// Carrusel
+
+$ carousel-control-color :              $ white  ! por defecto ;
+$ carrusel-control-width :              15 %  ! por defecto ;
+$ carousel-control-opacity :            .5  ! default ;
+$ carousel-control-hover-opacity :      .9  ! default ;
+$ carrusel-control-transition : opacidad .15 s ¡ facilidad ! por defecto ;
+
+$ carrusel-indicador-ancho :            30 px  ! por defecto ;
+$ carousel-indicator-height :           3 px  ! predeterminado ;
+$ carousel-indicator-hit-area-height : 10 px  ! predeterminado ;
+$ carousel-indicator-spacer :           3 px  ! predeterminado ;
+$ carousel-indicator-active-bg :        $ white  ! predeterminado ;
+$ carrusel-indicador-transición : opacidad .6 s ¡ facilidad ! por defecto ;
+
+$ carousel-caption-width :              70 %  ! predeterminado ;
+$ carousel-caption-color :              $ white  ! predeterminado ;
+
+$ carousel-control-icon-width :         20 px  ! predeterminado ;
+
+$ carousel-control-prev-icon-bg :       str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' fill = ' # { $ carousel-control-color } 'viewBox =' 0 0 8 8 '% 3e% 3cpath d =' M5.25 0l-4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z '/% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! Predeterminado ;
+$ carousel-control-next-icon-bg :       str-replace ( url ( " datos: imagen / svg + xml,% 3csvg xmlns = 'http: //www.w3.org/2000/svg' fill = ' # { $ carousel-control-color } 'viewBox =' 0 0 8 8 '% 3e% 3cpath d =' M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z '/% 3e% 3c / svg% 3e " ), " # " , " % 23 " ) ! predeterminado ;
+
+$ duración de transición de carrusel :        .6 s  ! predeterminado ;
+$ carrusel-transición : transformar $ carrusel-transición-duración facilidad - in - out ! default ; // Definir primero la transición de transformación si se usan transiciones múltiples (por ejemplo, `transformar 2s facilidad, opacidad .5s facilidad-fuera`)
+
+
+// hilanderos
+
+$ spinner-width :          2 rem  ! default ;
+$ spinner-height :         $ spinner-width  ! predeterminado ;
+$ spinner-border-width :   .25 em  ! default ;
+
+$ spinner-width-sm :         1 rem  ! default ;
+$ spinner-height-sm :        $ spinner-width-sm  ! predeterminado ;
+$ spinner-border-width-sm : .2 em  ! default ;
+
+
+// Cerca
+
+$ close-font-size :                    $ font-size-base * 1.5  ! predeterminado ;
+$ close-font-weight :                  $ font-weight-bold  ! predeterminado ;
+$ cerrar-color :                        $ negro  ! por defecto ;
+$ close-text-shadow :                  0 1 px 0  $ white  ! predeterminado ;
+
+
+// Código
+
+$ code-font-size :                     87.5 %  ! predeterminado ;
+$ code-color :                         $ pink  ! por defecto ;
+
+$ kbd-padding-y :                      .2 rem  ! default ;
+$ kbd-padding-x :                      .4 rem  ! default ;
+$ kbd-font-size :                      $ code-font-size  ! predeterminado ;
+$ kbd-color :                          $ blanco  ! por defecto ;
+$ kbd-bg :                             $ grey-900  ! predeterminado ;
+
+$ pre-color :                          $ grey-900  ! por defecto ;
+$ pre-scrollable-max-height :          340 px  ! predeterminado ;
+
+
+// Utilidades
+
+$ muestra : ninguno , en línea , en línea , bloque , tabla, tabla - fila, tabla - celda, flex, en línea - flex ! default ;
+$ desbordamientos : automático , oculto  ! predeterminado ;
+$ posiciones : estática , relativa , absoluta , fija , pegajosa ! por defecto ;
+
+
+// Imprimiendo
+
+$ impresión de páginas de tamaño : un 3  por defecto! ;
+$ print-body-min-width :               map-get ( $ grid-breakpoints , " lg " ) ! predeterminado ;
