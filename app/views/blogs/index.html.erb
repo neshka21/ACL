@@ -1,0 +1,28 @@
+<section class="blogs">
+  <div class="container">
+   <table class="table">
+     <thead>
+       <tr>
+          <th scope="col-3">First</th>
+          <th scope="col-3">Last</th>
+          <th scope="col-3">Handle</th>
+      </tr>
+     </thead>
+   <tbody>
+     <% @blog.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.imagen %></td>
+      <td><%= blog.description %></td>
+       <td>
+          <%= link_to "Mostrar",blog %>
+          <%= link_to "Editar", edit_blog_path(blog)%>
+          <%= link_to "Eliminar" %>
+        </td>
+    </tr>
+
+    <% end %>
+  </tbody>
+ </table>
+ </div>
+</section>

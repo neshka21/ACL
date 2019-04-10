@@ -7,4 +7,11 @@ Rails.application.routes.draw do
     
     resources :blogs
 
+
+    resources :admin do
+    	root to:"pages#index"
+        resources :blogs
+    end
+
+
 end
