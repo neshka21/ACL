@@ -3,4 +3,8 @@ Rails.application.routes.draw do
     root to:"page#index"
     get "components/styles"
     get "components/index"
+
+    
+    resources :blogs
+
 end
