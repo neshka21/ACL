@@ -1,18 +1,25 @@
-<div class="container">
-	<h1>Formulario</h1>
-	<%= form_fo @blog, html: { multipart: true } do |f| %>
-	<div>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</div>
-	<div>
-		<%= f.label :imagen %>
-		<%= f.file_field :imagen%>
-	</div>
-	<div>
-		<%= f.label :description %>
-		<%= f.text_field :description%>
-	</div>
-	<%= f.submit %>
-   <% end %>
-</div>
+<section class="new-blog">
+  <div class="container">
+    <h1>Nuevo Libro</h1>
+    <hr>
+      <%= form_for @blog, class:"form-group" ,url: {action: "create"} do |f|%>
+       <div><br>
+        <%= f.label :title %>
+        <%= f.text_field :title, class:"form-control"  %>
+      </div><br>
+       <div>
+      <%= f.label :img %>
+      <%= f.file_field :img, class:"form-control-file"%>
+     </div><br>
+      <div>
+       <%= f.label :description %>
+       <%= f.text_area :description,class:"form-control"%>
+      </div><br>
+     <div>
+      <%= f.submit %>
+    </div>
+    <br>
+    <% end %>
+    <%= link_to "volver", admin_blogs_path%>
+  </div>
+</section>

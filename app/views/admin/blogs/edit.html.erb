@@ -1,0 +1,24 @@
+<section class="edit-blog">
+  <div class="container">
+    <h1>Nuevo Libro</h1>
+    <hr><br>
+      <%= form_for @blog, class:"form-group" ,url: {action: "create"} do |f|%>
+       <div><br>
+        <%= f.label :title %>
+        <%= f.text_field :title, class:"form-control"  %>
+      </div><br>
+       <div>
+      <%= f.label :img %>
+      <%= f.file_field :img, class:"form-control-file"%>
+     </div><br>
+      <div>
+       <%= f.label :description %>
+       <%= f.text_area :description,class:"form-control"%>
+      </div><br>
+     <div>
+      <%= f.submit %>
+    </div>
+    <br>
+    <% end %>
+  </div>
+</section>

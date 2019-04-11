@@ -1,22 +1,29 @@
 <section class="blogs">
- <table class="table">
-  <thead>
+  <div class="container">
+   <table class="table">
+     <thead>
+       <tr>
+          <th class="col-3">First</th>
+          <th class="col">Last</th>
+          <th class="col">Handle</th>
+      </tr>
+     </thead>
+   <tbody>
+     <% @blog.each do |blog| %>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-       <% @blog.each do |blog| %>
       <td><%= blog.title %></td>
-      <td><%= blog.imagen %></td>
       <td><%= blog.description %></td>
-        <% end %>
-    </tr>
+      <td><%= image_tag blog.img.thumb.url%></td>
+        <td>
+          <%= link_to "Mostrar",admin_blog_path(blog)%>
+          <%= link_to "Editar", edit_admin_blog_path(blog)%>
+          <%= link_to "Eliminar",admin_blog_path(blog), method: :delete, data: { confirm: "¿Estás seguro de eliminar este dato" }%>
+       </td>
+     </tr>
+
+    <% end %>
   </tbody>
  </table>
+   <%= link_to "New", new_admin_blog_path%>
+ </div>
 </section>
