@@ -1,4 +1,4 @@
-<section class="new-blog">
+<section class="blogs">
   <div class="container">
     <h1>Nuevo Libro</h1>
     <hr>
@@ -16,10 +16,10 @@
        <%= f.text_area :description,class:"form-control"%>
       </div><br>
      <div>
-      <%= f.submit %>
+      <%= f.submit class:"btn btn-outline-primary"  %>
     </div>
     <br>
     <% end %>
-    <%= link_to "volver", admin_blogs_path%>
+    <%= link_to "Back", admin_blogs_path%>
   </div>
 </section>

@@ -1,8 +1,8 @@
-<section class="edit-blog">
+<section class="blogs">
   <div class="container">
     <h1>Nuevo Libro</h1>
     <hr><br>
-      <%= form_for @blog, class:"form-group" ,url: {action: "create"} do |f|%>
+      <%= form_for @blog, url:admin_blog_path do |f|%>
        <div><br>
         <%= f.label :title %>
         <%= f.text_field :title, class:"form-control"  %>
@@ -16,9 +16,10 @@
        <%= f.text_area :description,class:"form-control"%>
       </div><br>
      <div>
-      <%= f.submit %>
+      <%= f.submit class:"btn btn-outline-primary" %>
     </div>
     <br>
     <% end %>
+     <%= link_to "Back", admin_blogs_path%>
   </div>
 </section>

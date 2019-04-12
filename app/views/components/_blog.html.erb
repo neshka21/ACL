@@ -1,10 +1,15 @@
 <section class="blog-cards">
 	<div class="row">
+		<% @blog.each do |blog| %>
 		<div class="col-4">
 			<div class="card" style="width: 18rem;">
 				<div class="card-body">
-					<h5 class="card-title"></h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam esse iusto veniam nam quaerat blanditiis natus architecto iure eius officiis aut reprehenderit ab delectus sed fugit a, libero enim quidem.
+					<h5 class="card-title">
+                     <%= blog.title %>
+	                </h5>
+	                <%= image_tag blog.img.thumb.url, width: "85px"%> 
+					<p class="card-text">
+						<%= blog.description %>
 					</p>
 					<button class="btn btn-primary">
 						ver mas 
@@ -12,5 +17,6 @@
 				</div>
 			</div>
 		</div>
+		 <% end %>
 	</div>
 </section>

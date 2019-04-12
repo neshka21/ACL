@@ -4,4 +4,5 @@ def index
 	@blog = Blog.limit(4)
 end
 
+
 end

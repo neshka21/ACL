@@ -1,6 +1,21 @@
-<div class="container">
-<h1>Detalles del Libro</h1>
-<div>Nombre: <%= @blog.title %></div>
-<div>imagen: <%= image_tag @blog.img.thumb.url%></div>
-<div>Descripción: <%= @blog.description %></div>
-</div>
+<section class="blogs">
+   <div class="container">
+   	<h1>SHOW</h1>
+       <hr>
+   	 <div class="row">
+       <div class="col-8 contenido">
+       	  <h4>
+          	TITULO:<%= @blog.title%>
+	      </h4>
+         <h4>Description:</h4> 
+         <%= @blog.description %>
+       </div>
+        <div class="col-4 img">
+         	 <%= image_tag @blog.img.thumb.url%> 
+       </div>
+     </div>
+     <br>
+     <%= link_to 'Back',admin_blogs_path, class:"btn btn-outline-primary" %>
+     <%= link_to "Editar", edit_admin_blog_path, class:"btn btn-outline-success"%>
+   </div>
+</section> 
