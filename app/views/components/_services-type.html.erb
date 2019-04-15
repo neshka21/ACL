@@ -1,38 +1,11 @@
-<section class="services-type">
+<section class="services">
 	<div class="row justify-center">
 		<div class="col-3">
-			<h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
+			<% @service.each do |service|%>
+			<%= image_tag service.imgs.thumb.url, width:"90px"%>
+			<h2><%= service.title%></h2>
+			<p><%= service.description%></p>
+			<% end %>
 		</div>
-		<div class="col-3">
-			<h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>			
-		</div>
-		<div class="col-3">
-			<h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
-		</div>
-		<div class="col-3">
-			<h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
-		</div>		
-	</div>
-	<div class="row">
-		<div class="col-3">
-		    <h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
-		</div>
-		<div class="col-3">
-			<h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
-		</div>
-		<div class="col-3">
-		    <h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
-		</div>
-		<div class="col-3">
-		    <h1>services 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem eaque repudiandae, ipsam necessitatibus placeat tenetur neque. Quas inventore, iste aliquam sunt doloribus. Fugiat sunt, repellendus, mollitia reprehenderit nobis necessitatibus ab.</p>
-		</div>		
 	</div>
 </section>

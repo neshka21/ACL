@@ -1,0 +1,27 @@
+<section class="blogs">
+  <div class="container">
+   <table class="table">
+     <thead>
+       <tr>
+          <th class="col-4">Title</th>
+          <th class="col">Description</th>
+          <th class="col"></th>
+      </tr>
+     </thead>
+   <tbody>
+     <% @service.each do |service| %>
+    <tr>
+      <td><%= service.title %></td>
+      <td><%= service.description %></td>
+      <td><%= link_to "Mostrar",admin_service_path(service), class:"btn btn-outline-primary"%></td>
+      <td><%= link_to "Editar", edit_admin_service_path(service), class:"btn btn-outline-success"%></td>
+       <td><%= link_to "Eliminar",admin_service_path(service), method: :delete, data: { confirm: "¿Estás seguro de eliminar este dato"}, class:"btn btn-outline-danger"%>
+       </td>
+     </tr>
+
+    <% end %>
+  </tbody>
+ </table>
+   <%= link_to "New", new_admin_service_path, class:"btn btn-outline-primary"%>
+ </div>
+</section>

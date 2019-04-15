@@ -1,0 +1,25 @@
+  <section class="services">
+  <div class="container">
+    <h1>Nuevo services</h1>
+    <hr>
+      <%= form_for @service, class:"form-group" ,url: {action: "create"} do |f|%>
+       <div><br>
+        <%= f.label :title %>
+        <%= f.text_field :title, class:"form-control"  %>
+      </div><br>
+      <div>
+        <%= f.label :imgs %>
+        <%= f.file_field :imgs, class:"form-control-file"%>
+      </div><br>
+      <div>
+       <%= f.label :description %>
+       <%= f.text_area :description,class:"form-control"%>
+      </div><br>
+     <div>
+      <%= f.submit class:"btn btn-outline-primary"  %>
+    </div>
+    <br>
+    <% end %>
+    <%= link_to "Back", admin_services_path%>
+  </div>
+</section>

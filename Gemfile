@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
+#gem devise
+gem 'devise', git: 'git://github.com/plataformatec/devise.git'
+#insertar imagen 
 gem 'carrierwave'
 gem 'mini_magick'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
