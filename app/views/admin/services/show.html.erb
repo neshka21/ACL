@@ -2,8 +2,7 @@
    <div class="container">
    	<h1>SHOW</h1>
        <hr>
-   	 <div class="row">
-         <div class="row">
+      <div class="row">
        <div class="col-8 contenido">
           <h4>
             TITULO:<%= @service.title%>
@@ -12,9 +11,11 @@
          <%= @service.description %>
        </div>
         <div class="col-4 img">
-           <%= image_tag @service.imgs.thumb.url%> 
+           <%= image_tag @service.imgs.thumb.url,width: "304px",
+              height: "227px"%> 
        </div>
      </div>
+     <br>
      <%= link_to 'Back',admin_services_path, class:"btn btn-outline-primary" %>
      <%= link_to "Editar", edit_admin_service_path, class:"btn btn-outline-success"%>
    </div>

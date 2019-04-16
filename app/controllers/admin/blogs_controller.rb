@@ -1,4 +1,5 @@
 class Admin::BlogsController < ApplicationController
+layout "admin"
 #----------index
 def index
   @blog = Blog.all
