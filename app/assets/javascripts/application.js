@@ -17,3 +17,15 @@
 // = requiere jquery3 
 // = requiere popper 
 // = requiere bootstrap-sprockets
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 300) {
+	    $(".navbar").css("background" , "navbars");
+	  }
+
+	  else{
+		  $(".navbar").css("background" , "#333");  	
+	  }
+  })
+})

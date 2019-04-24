@@ -1,5 +1,5 @@
 class Admin::ServicesController < ApplicationController
-layout "admin"
+
 #----------index
 def index
   @service = Service.all

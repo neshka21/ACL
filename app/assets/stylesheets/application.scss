@@ -13,12 +13,18 @@
  */
 @import "bootstrap";
 @import "components/hero";
+@import "components/navbar";
 @import "components/services";
 @import "components/blogs";
 @import "components/footer";
+@import "components/cards";
 @import "admin/login";
 @import "admin/blogs";
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 
+body{
+	border:none;
+}
 
 

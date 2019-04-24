@@ -1,4 +1,31 @@
 .navbar{
-   
-   margin-bottom: 5rem;
+
+   position: fixed;
+   top:0;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.5rem 1rem;
+   width: -moz-available;
+   z-index:1;
+   font-family: 'Rubik', sans-serif;
+
+    .navbars{
+
+ 	position: fixed;
+ 	top: 0;
+ 	background: blue;
+ 	flex-wrap: wrap;
+ 	align-items: center;
+ 	justify-content: space-between;
+ 	padding: 1.5rem 1rem;
+    width: -moz-avalialable;
+    z-index: 1;
+
+
+
+  }
+
+ 
 }
+
