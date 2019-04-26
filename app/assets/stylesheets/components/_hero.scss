@@ -6,6 +6,11 @@
 	    height: 689px;
 	    font-family: 'Rubik', sans-serif;
 
+   .row{
+
+      margin-bottom: 3rem;
+       }
+
 	.col-6{
 		padding: 7.5rem 1rem;
         margin-top: 3rem;
@@ -24,6 +29,81 @@
 		background-size: 400px;
 		height: 435px;
 	}
+    .card{  
+        
+       	.card-body{ 
+    	font-family: 'Rubik', sans-serif;
+    	font-size: 0.7rem;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+
+        button{
+        	line-height: 1.2rem;
+           }
+        }
+    }
+      }
 
 
+
+    // Extra small devices (portrait phones, less than 576px) // No media query for `xs` since this is the default in Bootstrap // Small devices (landscape phones, 576px and up) 
+   
+    // Medium devices (tablets, 768px and up) 
+    @media ( max-width : 768px ) {
+
+    .hero{
+
+    	 background-size: 100%;
+	     height: 689px;
+   
+    
+    .col-6{
+    	 padding: 8.5rem 1rem;
+           margin-top: -3rem;
+           font-size: 12px;
+
+	}
+	.imagen{
+		background-size: 194px;
+
+	}
+    } 
 }
+
+ @media ( max-width : 576px ) { 
+
+       .hero{
+    	.col-6 {
+           padding: 7.5rem 1rem;
+           margin-top: -3rem;
+           font-size: 12px;
+
+          }
+  
+        .contenido .col-6{
+  
+	    h1{
+
+			font-size: 15px
+		}
+		p{
+			font-style: 9px;
+		}
+
+	    }
+
+	    .imagen{
+			background-size: 194px;
+		}
+
+
+    }
+   } 
+
+
+ // Large devices (desktops, 992px and up) 
+    @media ( min-width : 992px ) { } 
+    // Extra large devices (large desktops, 1200px and up)  
+    @media ( min-width : 1200px ) { } 
+

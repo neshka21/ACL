@@ -1,26 +1,36 @@
+
 <nav class="navbar navbar-expand-lg navbar-light">
-	<div class="container">
-	<a href=""><%= link_to image_tag('style/logo_light.png',height: '39px',
-width: '104px'), root_path%></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-		<span class="navbar-toggler-icono"><%= image_tag("iconos/menu.png" , alt:"icono") %></span>
-	</button>
-	<div class="collapse navbar-collapse  justify-content-end"  id="navbarNav">
-		<ul class="navbar-nav">
-			<li class="nav-item">
-			   <a href="">
-			  	  <% if signed_in? %>
-			  	     <%= link_to 'Blogs', admin_blogs_path%>
-			  	     <%= link_to 'Services',admin_services_path%>
-                     <%= link_to "Salir", destroy_user_session_path, method: :delete %>
-                  <% else %>
-                     <%= link_to "Registrarse", new_user_registration_path %>
-                     <%= link_to "Ingresar", new_user_session_path %>
-                 <% end %>
-               </a>
-			</li>			
-		 </ul>
-	</div>
-</div>
+ <div class="container">
+  <a ><%= link_to image_tag('style/logo_light.png',height: '43px',width: '104px',class:"navbar-brand"), root_path%></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Servicios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Precios</a>
+      </li>
+    </ul>
+    <div class=" my-2 my-lg-0">
+     <a>
+			  	            <% if signed_in? %>
+			  	            <%= link_to 'Blogs', admin_blogs_path%>
+			  	            <%= link_to 'Services',admin_services_path%>
+                            <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+                            <% else %>
+                            <%= link_to "Registrarse", new_user_registration_path,class:"link"%>
+                          <%= link_to "Ingresar", new_user_session_path,class:"link"%>
+                          <% end %>
+                      </a>
+    </div>
+  </div>
+ </div>
 </nav>
-    
+
