@@ -13,10 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
-// = requiere jquery3 
-// = requiere popper 
-// = requiere bootstrap-sprockets
+//= requiere jquery3 
+//= requiere popper 
+//= requiere bootstrap-sprockets
 $(document).ready(function(){
   $(window).scroll(function(){
   	var scroll = $(window).scrollTop();

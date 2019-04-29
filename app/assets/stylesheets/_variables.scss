@@ -48,7 +48,7 @@ $ cyan :     # 17a2b8  ! default ;
 $ colores : () ! por defecto ;
 // stylelint-disable-next-line scss / dollar-variable-default
 $ colores : map-merge (
-  (
+  ( 
     " azul " :        $ azul ,
     " índigo " :      $ índigo ,
     " púrpura " :      $ púrpura ,
