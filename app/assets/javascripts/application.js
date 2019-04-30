@@ -13,18 +13,29 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= requiere jquery3 
-//= requiere popper 
-//= requiere bootstrap-sprockets
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+      
 $(document).ready(function(){
   $(window).scroll(function(){
   	var scroll = $(window).scrollTop();
-	  if (scroll > 300) {
+	  if (scroll > 90) {
 	    $(".navbar").css("background" , "navbars");
 	  }
 
 	  else{
-		  $(".navbar").css("background" , "#333");  	
+		  $(".navbar").css("background" , "");  	
 	  }
+ 
+      if (scroll <100) {
+      $(".navbar").css("background" , "navbars");
+    }
+
+    else{
+      $(".navbar").css("background" , "#36b0f2");    
+    }
   })
 })
+

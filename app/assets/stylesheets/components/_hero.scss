@@ -1,86 +1,78 @@
 .hero{       
-	 
-	    margin-bottom: 5rem;
-	    background: url(style/hero_bg.png) center top no-repeat;
-	    background-size: 100%;
-	    height: 640px;
-	    font-family: 'Rubik', sans-serif;
+	 margin-bottom: 5rem;
+	 background: url(style/hero_bg.png) center top no-repeat;
+   background-size: 100%;
+	 height: 640px;
+	 font-family: 'Rubik', sans-serif;
 
-   .row{
+    .row{
+        margin-bottom: 3rem;
+     }
 
-      margin-bottom: 3rem;
-       }
-
-	.col-md-6{
+	  .col-md-6{
 		    padding: 7.5rem 1rem;
         margin-top: 3rem;
-	}
-	.contenido{
-		h1{
-			color:white;
-		}
+  	}
+
+	  .contenido{
+		  h1{
+			 color:white;
+		    }
 	    p{
 	    	color:white;
-	    }
-	}
+	     }
+   	}
 
-	.imagen{
-		background: url(style/hero_img.png) center no-repeat;
-		background-size: 400px;
-		height: 435px;
-	}
+	  .imagen{
+		 background: url(style/hero_img.png) center no-repeat;
+		 background-size: 400px;
+		 height: 435px;
+	   }
+
     .card{  
         
        	.card-body{ 
-    	font-family: 'Rubik', sans-serif;
-    	font-size: 0.7rem;
-        line-height: 1.5;
-        color: #212529;
+    	   font-family: 'Rubik', sans-serif;
+         font-size: 0.7rem;
+         line-height: 1.5;
+         color: #212529;
 
-        button{
+         button{
         	line-height: 1.2rem;
-           }
-        }
+           }           
     }
-      }
+
+  }
+}
 
  
 
-    // Extra small devices (portrait phones, less than 576px) // No media query for `xs` since this is the default in Bootstrap // Small devices (landscape phones, 576px and up) 
-   
-    // Medium devices (tablets, 768px and up) 
-@media ( max-width : 360px){
+@media only screen and (max-width : 480px){
    
     .hero{
-      
-      background-size: 100% 50%;
-    .col-md-6 {
-      
-    }
+      background-size: 100% 50% !important;
 
-   .imagen{
-    margin-top: -13rem;
-
+    .imagen{
+      margin-top: -14rem !important;
+      background-size: 233px 180px !important;
 
     }
+
 	} 
 }
 
- @media ( max-width : 768px){ 
+@media screen and (max-width:800px){ 
 
       .hero{
-            background-size: 100% 55%;
+        background-size: 100% 55%;
 
-
-    	    .col-md-6 {
-           
-              padding: 7.5rem 1rem;
-              margin-top: -1rem;
-              font-size: 12px;
-
-             }
+    	   .col-md-6{
+            padding: 7.5rem 1rem;
+            margin-top: -1rem;
+            font-size: 12px;
+         }
   
-          .contenido .col-6{
+         .col-md-6 .contenido{
   
 	          h1{
 
@@ -103,8 +95,5 @@
    } 
 
 
- // Large devices (desktops, 992px and up) 
-    @media ( min-width : 992px ) { } 
-    // Extra large devices (large desktops, 1200px and up)  
-    @media ( min-width : 1200px ) { } 
+
 

@@ -1,7 +1,7 @@
 .main-services{
 
-    margin-top: -15rem;
-    margin-bottom: 5rem;
+    margin-top: -12rem;
+    margin-bottom: 2rem;
 
   .card-body{ 
 
@@ -10,12 +10,34 @@
          line-height: 1.5;
          color: #212529;
 
-        }
+   }
   .card{
 
         margin-bottom: 2rem;
 
-        }
+   }
  
  
+}
+
+@media ( max-width: 480px) {
+
+  .main-services{
+    margin-top: -11rem !important;
+ 
+ 
+ 
+  }
+
+  
+}
+
+
+@media screen and (max-width:1024px) and(min-width: 768px){
+
+  .main-services{
+    margin-top: -21rem ;
+  }
+ 
+  
 }

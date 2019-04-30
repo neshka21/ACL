@@ -1,11 +1,13 @@
 <section class="services">
-	<div class="row text-center">
-		<% @service.each do |service|%>
-		<div class="col-12 col-lg-4">
+	<div class="container">
+	   <div class="row text-center">
+		  <% @service.each do |service|%>
+		   <div class="col-12 col-lg-4">
 			<%= image_tag service.imgs.thumb.url, width:"90px"%>
 			<h2><%= service.title%></h2>
 			<p><%= service.description%></p>
 		</div>
 			<% end %>
 	</div>
+  </div>
 </section>
