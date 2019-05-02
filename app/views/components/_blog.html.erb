@@ -1,23 +1,23 @@
   <section class="blog-cards">
-	<div class="row">
-		<% @blog.each do |blog| %>
-		<div class="col-12 col-lg-4">
-			<div class="card" style="width: 18rem;">
-				<div class="card-body">
-					<h5 class="card-title">
-                     <%= blog.title %>
-	                </h5>
-	                <%= image_tag blog.img.thumb.url, width: "240px",height:"152px"%> 
-					<p class="card-text">
-						<%= blog.description %>
-					</p>
-					<button class="btn btn-primary">
-						ver mas 
-					</button>	
-				</div>
-			</div>
-		</div>
-		 <% end %>
+	  <div class="row">
+		  <% @blog.each do |blog| %>
+	     	<div class="col-12 col-lg-4">
+			    <div class="card" style="width: 18rem;">
+				    <div class="card-body">
+					    <h5 class="card-title">
+                           <%= blog.title %>
+	                    </h5>
+	                    <%= image_tag blog.img.thumb.url, width: "240px",height:"152px"%> 
+					    <p class="card-text">
+						   <%= blog.description %>
+					    </p>
+				    	   <button class="btn btn-primary">
+						    ver mas 
+					      </button>	
+				   </div>
+			  </div>
+		  </div>
+	   <% end %>
 	</div>
 </section>
 
